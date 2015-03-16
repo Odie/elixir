@@ -14,5 +14,6 @@ var config = elixir.config;
  */
 
 elixir.extend('copy', function(source, destination) {
+    this.registerWatcher("copy", source);
     return copy(source, destination);
 });

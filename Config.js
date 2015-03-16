@@ -28,8 +28,9 @@ config.registerWatcher = function(task, search, group) {
     group = group || 'default';
 
     this.watchers[group] = this.watchers[group] || {};
+    this.watchers[group][task] = this.watchers[group][task] || [];
 
-    this.watchers[group][task] = search;
+    this.watchers[group][task].push(search);
 
     return this;
 }
